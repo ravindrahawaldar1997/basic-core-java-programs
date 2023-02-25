@@ -2,6 +2,7 @@ package com.bridgelabz.basic_core_java_programs;
 
 import com.sun.jdi.VMCannotBeModifiedException;
 
+import javax.swing.plaf.basic.BasicViewportUI;
 import java.util.Scanner;
 
 public class BasicCorePrograms {
@@ -94,6 +95,20 @@ public class BasicCorePrograms {
         System.out.println("===================");
         return quotient;
     }
+    static int swap(){
+        System.out.println("Enter the first number");
+        int firstNumber = sc.nextInt();
+        System.out.println("Enter the second number");
+        int secondNumber = sc.nextInt();
+        int temp = 0;
+        System.out.println("Numbers before swapping " + firstNumber + " " + secondNumber);
+        temp = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = temp;
+        System.out.println("Numbers after swapping " + firstNumber + " " + secondNumber);
+        System.out.println("===================");
+        return temp;
+    }
 
     public static void main(String[] args) {
         BasicCorePrograms.flipCoin();
@@ -102,6 +117,7 @@ public class BasicCorePrograms {
         BasicCorePrograms.harmonicNumber();
         BasicCorePrograms.primeFactors();
         BasicCorePrograms.quotientAndRemainder();
+        BasicCorePrograms.swap();
 
     }
 }
