@@ -50,10 +50,24 @@ public class BasicCorePrograms {
         return powerOfTwo;
     }
 
+    static double harmonicNumber() {
+        System.out.println("Enter the number whose harmonic number you want");
+        int number = sc.nextInt();
+        double result = 0.0;
+        int i;
+        for (i = 1; i < number; i++) {
+            result = result + (double) 1 / i;
+        }
+        System.out.println("The harmonic number of " + i + " is " + result);
+        System.out.println("===================");
+        return result;
+    }
+
     public static void main(String[] args) {
         BasicCorePrograms.flipCoin();
         BasicCorePrograms.leapYear();
         BasicCorePrograms.powerOfTwo();
+        BasicCorePrograms.harmonicNumber();
 
     }
 }
