@@ -95,7 +95,8 @@ public class BasicCorePrograms {
         System.out.println("===================");
         return quotient;
     }
-    static int swap(){
+
+    static int swap() {
         System.out.println("Enter the first number");
         int firstNumber = sc.nextInt();
         System.out.println("Enter the second number");
@@ -109,7 +110,8 @@ public class BasicCorePrograms {
         System.out.println("===================");
         return temp;
     }
-    static void evenOrOdd(){
+
+    static void evenOrOdd() {
         System.out.println("Enter the number to check even or odd");
         int number = sc.nextInt();
         if (number % 2 == 0) {
@@ -118,6 +120,33 @@ public class BasicCorePrograms {
             System.out.println(number + " is odd number");
         }
         System.out.println("===================");
+    }
+
+    static char vowelOrConsonant() {
+        System.out.println("Enter a character a to z");
+        char alphabet = sc.next().charAt(0);
+        switch (alphabet) {
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                System.out.println(+alphabet + " ia a vowel");
+                break;
+            default:
+                if ((alphabet >= 'a' && alphabet <= 'z') || (alphabet >= 'A' && alphabet <= 'Z')) {
+                    System.out.println(alphabet + " is a consonant");
+                } else {
+                    System.out.println("please enter the alphabet");
+                }
+        }
+        System.out.println("===================");
+        return alphabet;
     }
 
     public static void main(String[] args) {
@@ -129,6 +158,7 @@ public class BasicCorePrograms {
         BasicCorePrograms.quotientAndRemainder();
         BasicCorePrograms.swap();
         BasicCorePrograms.evenOrOdd();
+        BasicCorePrograms.vowelOrConsonant();
 
     }
 }
