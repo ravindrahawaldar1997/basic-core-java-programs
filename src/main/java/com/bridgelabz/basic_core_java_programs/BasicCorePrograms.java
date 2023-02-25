@@ -109,6 +109,16 @@ public class BasicCorePrograms {
         System.out.println("===================");
         return temp;
     }
+    static void evenOrOdd(){
+        System.out.println("Enter the number to check even or odd");
+        int number = sc.nextInt();
+        if (number % 2 == 0) {
+            System.out.println(number + " is even number ");
+        } else {
+            System.out.println(number + " is odd number");
+        }
+        System.out.println("===================");
+    }
 
     public static void main(String[] args) {
         BasicCorePrograms.flipCoin();
@@ -118,6 +128,7 @@ public class BasicCorePrograms {
         BasicCorePrograms.primeFactors();
         BasicCorePrograms.quotientAndRemainder();
         BasicCorePrograms.swap();
+        BasicCorePrograms.evenOrOdd();
 
     }
 }
