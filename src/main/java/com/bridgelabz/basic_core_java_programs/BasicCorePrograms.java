@@ -25,10 +25,21 @@ public class BasicCorePrograms {
         System.out.println("The Percentage of head is " + headPercentage + "%");
         System.out.println("===================");
     }
-
+    static int leapYear() {
+        System.out.println("Enter the year");
+        int year = sc.nextInt();
+        if (year % 4 == 0 || year % 400 == 0 && year % 100 != 0) {
+            System.out.println(+year + " is a leap year");
+        } else {
+            System.out.println(+year + " is not a leap year");
+        }
+        System.out.println("===================");
+        return year;
+    }
 
     public static void main(String[] args) {
         BasicCorePrograms.flipCoin();
+        BasicCorePrograms.leapYear();
 
     }
 }
