@@ -1,8 +1,5 @@
 package com.bridgelabz.basic_core_java_programs;
 
-import com.sun.jdi.VMCannotBeModifiedException;
-
-import javax.swing.plaf.basic.BasicViewportUI;
 import java.util.Scanner;
 
 public class BasicCorePrograms {
@@ -149,6 +146,25 @@ public class BasicCorePrograms {
         return alphabet;
     }
 
+    static int largestOfThreeNumbers() {
+        System.out.println("Enter the first number");
+        int numberOne = sc.nextInt();
+        System.out.println("Enter the second number");
+        int numberTwo = sc.nextInt();
+        System.out.println("Enter the third number");
+        int numberThree = sc.nextInt();
+
+        if (numberOne > numberTwo && numberOne > numberThree) {
+            System.out.println("Largest number is " + numberOne);
+        } else if (numberTwo > numberOne && numberTwo > numberThree) {
+            System.out.println("Largest number is " + numberTwo);
+        } else {
+            System.out.println("Largest number is " + numberThree);
+        }
+        System.out.println("===================");
+        return numberOne;
+    }
+
     public static void main(String[] args) {
         BasicCorePrograms.flipCoin();
         BasicCorePrograms.leapYear();
@@ -159,6 +175,6 @@ public class BasicCorePrograms {
         BasicCorePrograms.swap();
         BasicCorePrograms.evenOrOdd();
         BasicCorePrograms.vowelOrConsonant();
-
+        BasicCorePrograms.largestOfThreeNumbers();
     }
 }
