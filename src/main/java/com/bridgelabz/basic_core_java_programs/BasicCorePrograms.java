@@ -81,12 +81,27 @@ public class BasicCorePrograms {
         return primeFactorial;
     }
 
+    static int quotientAndRemainder() {
+        System.out.println("Enter the value of dividend");
+        int dividend = sc.nextInt();
+        System.out.println("Enter the value of divisor");
+        int divisor = sc.nextInt();
+        int quotient = dividend / divisor;
+        int reminder = dividend % divisor;
+
+        System.out.println("The quotient is " + quotient);
+        System.out.println("The reminder is " + reminder);
+        System.out.println("===================");
+        return quotient;
+    }
+
     public static void main(String[] args) {
         BasicCorePrograms.flipCoin();
         BasicCorePrograms.leapYear();
         BasicCorePrograms.powerOfTwo();
         BasicCorePrograms.harmonicNumber();
         BasicCorePrograms.primeFactors();
+        BasicCorePrograms.quotientAndRemainder();
 
     }
 }
