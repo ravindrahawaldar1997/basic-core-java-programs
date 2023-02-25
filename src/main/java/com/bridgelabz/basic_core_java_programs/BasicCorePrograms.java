@@ -1,5 +1,7 @@
 package com.bridgelabz.basic_core_java_programs;
 
+import com.sun.jdi.VMCannotBeModifiedException;
+
 import java.util.Scanner;
 
 public class BasicCorePrograms {
@@ -63,11 +65,28 @@ public class BasicCorePrograms {
         return result;
     }
 
+    static int primeFactors() {
+        System.out.println("Enter the number whose prime factors you want");
+        int number = sc.nextInt();
+        int primeFactorial = 2;
+        while (number > 1) {
+            if (number % primeFactorial == 0) {
+                System.out.println(primeFactorial);
+                number = number / primeFactorial;
+            } else {
+                primeFactorial++;
+            }
+        }
+        System.out.println("===================");
+        return primeFactorial;
+    }
+
     public static void main(String[] args) {
         BasicCorePrograms.flipCoin();
         BasicCorePrograms.leapYear();
         BasicCorePrograms.powerOfTwo();
         BasicCorePrograms.harmonicNumber();
+        BasicCorePrograms.primeFactors();
 
     }
 }
