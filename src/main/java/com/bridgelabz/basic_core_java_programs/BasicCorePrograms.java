@@ -25,6 +25,7 @@ public class BasicCorePrograms {
         System.out.println("The Percentage of head is " + headPercentage + "%");
         System.out.println("===================");
     }
+
     static int leapYear() {
         System.out.println("Enter the year");
         int year = sc.nextInt();
@@ -37,9 +38,22 @@ public class BasicCorePrograms {
         return year;
     }
 
+    static int powerOfTwo() {
+        System.out.println("Enter the power value N");
+        int N = sc.nextInt();
+        int powerOfTwo = 0;
+        for (int i = 1; i <= N; i++) {
+            powerOfTwo = (int) Math.pow(2, i);
+            System.out.println(i + "th power of 2 is " + powerOfTwo);
+        }
+        System.out.println("===================");
+        return powerOfTwo;
+    }
+
     public static void main(String[] args) {
         BasicCorePrograms.flipCoin();
         BasicCorePrograms.leapYear();
+        BasicCorePrograms.powerOfTwo();
 
     }
 }
